@@ -1,0 +1,10 @@
+# Render blueprint: New > Blueprint > pick this repo. Free plan, no paid services.
+services:
+  - type: web
+    name: ajaia-docs
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: COOKIE_SECRET
+        generateValue: true
